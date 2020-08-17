@@ -15,15 +15,13 @@ const Todo = () => {
             <h1>To do</h1>
             <button onClick={() => fetchTodo()}>Fetch Todo</button>
             { 
-                todo != null ?
+                todo &&
                 <div>
                     <div>{todo.userId}</div>
                     <div>{todo.id}</div>
                     <div>{todo.title}</div>
                     <div>{todo.completed}</div>
                 </div>
-                :
-                <span>No data yet</span>
             }
         </div>
     )
