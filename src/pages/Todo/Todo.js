@@ -12,6 +12,7 @@ const Todo = () => {
 
     return (
         <div>
+            <h1>To do</h1>
             <button onClick={() => fetchTodo()}>Fetch Todo</button>
             { 
                 todo != null ?
