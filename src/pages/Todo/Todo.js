@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import { TODO_URL } from '../../Constants'
 
 const Todo = () => {
 
     const [todo, setTodo] = useState(null)
 
     const fetchTodo = () => {
-        fetch('https://jsonplaceholder.typicode.com/todos/8')
+        fetch(TODO_URL)
         .then(res => res.json())
         .then(data => setTodo(data))
     }
