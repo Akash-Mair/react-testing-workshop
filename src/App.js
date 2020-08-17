@@ -9,7 +9,6 @@ import { UserContext } from './index.js';
 
 function App() {
   const { username } = useContext(UserContext)
-  console.log(username)
   return (
     <div className="App">
       <nav>
@@ -19,7 +18,9 @@ function App() {
         <div>{username}</div>
       </nav>
       <Switch>
-        <Route exact path="/" component={Counter} />
+        <Route exact path="/">
+          <Counter initialCountValue={0} />
+        </Route>
         <Route exact path="/todo" component={Todo} />
         <Route exact path="/userform" component={UserForm} />
       </Switch>
