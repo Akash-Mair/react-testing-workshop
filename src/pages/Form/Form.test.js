@@ -5,11 +5,15 @@ import userEvent from '@testing-library/user-event'
 import UserForm from './Form'
 
 
+test('UserForm renders', () => {
+    render(<UserForm />)
+})
+
 test('when a user types in the first name input that value is reflected in the input', () => {
     const event = {
         target: {
             name: 'firstName',
-            value: 'Joe'
+            value: 'Kash'
         }
     }
 
@@ -17,7 +21,7 @@ test('when a user types in the first name input that value is reflected in the i
     const firstNameInputNode = getByLabelText(/first name/i)
     fireEvent.change(firstNameInputNode, event)
 
-    expect(firstNameInputNode.value).toBe('Joe')
+    expect(firstNameInputNode.value).toBe('Kash')
 })
 
 
