@@ -5,7 +5,7 @@ import './App.css';
 import Counter from './pages/Counter/Counter';
 import UserForm from './pages/Form/Form';
 import Todo from './pages/Todo/Todo';
-import { UserContext } from './index.js';
+import { UserContext } from './AuthProvider/UserContext';
 
 function App() {
   const { username } = useContext(UserContext)

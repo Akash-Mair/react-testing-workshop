@@ -4,6 +4,7 @@ const Counter = ({ initialCountValue }) => {
     const [count, setCount] = useState(initialCountValue)
     return (
        <div>
+           <h1>Counter</h1>
            <div data-testid="count-value">{count}</div>
            <button onClick={() => setCount(count + 1)}>Increment</button>
            <button onClick={() => setCount(count - 1)}>Decrement</button>
