@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useContext } from 'react';
+import { Link, Switch, Route } from 'react-router-dom'
+
 import './App.css';
+import Counter from './pages/Counter/Counter';
+import UserForm from './pages/Form/Form';
+import Todo from './pages/Todo/Todo';
+import { UserContext } from './index.js';
 
 function App() {
+  const { username } = useContext(UserContext)
+  console.log(username)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <Link to="/">Counter</Link>
+        <Link to="/todo">Todo</Link>
+        <Link to="/userform">Form</Link>
+        <div>{username}</div>
+      </nav>
+      <Switch>
+        <Route exact path="/" component={Counter} />
+        <Route exact path="/todo" component={Todo} />
+        <Route exact path="/userform" component={UserForm} />
+      </Switch>
     </div>
   );
 }

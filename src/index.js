@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom'
+
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+export const UserContext = createContext()
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+      <UserContext.Provider value={{username:'Kash'}}>
+    <Router >
+      <App />
+    </Router>
+      </UserContext.Provider>
+, document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
