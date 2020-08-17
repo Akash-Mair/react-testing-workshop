@@ -24,8 +24,6 @@ test('when a user types in the first name input that value is reflected in the i
     expect(firstNameInputNode.value).toBe('Kash')
 })
 
-
-
 test('when a user types in the first name input that value is reflected in the input', () => {
     const { getByLabelText } = render(<UserForm/>)
 
