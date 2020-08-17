@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 const Counter = ({ initialCountValue }) => {
     const [count, setCount] = useState(initialCountValue)
+
     return (
        <div>
            <h1>Counter</h1>
