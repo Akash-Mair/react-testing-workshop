@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react'
 import { setupServer } from 'msw/node'
 
 import Todo from './Todo'
-import { handlers } from '../../__mocks__/server-handler'
+import { handlers } from '../../__mocks__/Todo/server-handler'
 
 const server = setupServer(...handlers)
 
