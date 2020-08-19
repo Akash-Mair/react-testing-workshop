@@ -11,8 +11,8 @@ const UserForm = () => {
     const handleChange = event => {
         const { target: { name, value } } = event
         setFormData({...formData, [name]: value})
-        console.log(formData)
     }
+    console.log(formData)
 
     return (
        <div>
