@@ -5,8 +5,8 @@ const Todo = () => {
 
     const [todo, setTodo] = useState(null)
 
-    const fetchTodo = () => {
-        fetch(TODO_URL)
+    const fetchTodo = (url) => {
+        fetch(url)
         .then(res => res.json())
         .then(data => setTodo(data))
     }
@@ -14,7 +14,7 @@ const Todo = () => {
     return (
         <div>
             <h1>To do</h1>
-            <button onClick={() => fetchTodo()}>Fetch Todo</button>
+            <button onClick={() => fetchTodo(TODO_URL)}>Fetch Todo</button>
             { 
                 todo &&
                 <div>
