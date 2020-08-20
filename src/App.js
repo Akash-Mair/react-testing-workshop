@@ -15,7 +15,7 @@ function App() {
         <Link to="/">Counter</Link>
         <Link to="/todo">Todo</Link>
         <Link to="/userform">Form</Link>
-        <div>{username}</div>
+        <div>{username || 'Guest'}</div>
       </nav>
       <Switch>
         <Route exact path="/">
